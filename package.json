@@ -1,0 +1,15 @@
+{
+  "name": "web-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Retrolove-Games/web-ui.git",
+  "author": "Konrad Fedorczyk <contact@realhe.ro>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

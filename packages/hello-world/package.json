@@ -1,0 +1,19 @@
+{
+  "name": "@retrolove-games/ui-hello-world",
+  "version": "0.0.0",
+  "author": "Konrad Fedorczyk",
+  "license": "MIT",
+  "repository": "git://github.com/Retrolove-Games/web-ui.git",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
