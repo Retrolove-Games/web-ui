@@ -8,3 +8,4 @@ prettierrc.js
 tsconfig.json
 *.css
 dist
+*.d.ts
