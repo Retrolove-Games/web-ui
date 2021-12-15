@@ -1,0 +1,9 @@
+static
+.cache
+content
+node_modules
+.eslintrc.js
+rollup.config.common.js
+prettierrc.js
+tsconfig.json
+*.css

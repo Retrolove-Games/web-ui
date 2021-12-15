@@ -8,12 +8,25 @@
   "private": true,
   "scripts": {
     "build": "lerna run build --stream",
-    "publish": "npm run build && lerna publish"
+    "publish": "npm run build && lerna publish",
+    "lint": "eslint packages/**/src/**/*",
+    "lint:fix": "eslint packages/**/src/**/* --fix",
+    "lint:quiet": "eslint packages/**/src/**/* --quiet"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@types/react": "^17.0.37",
     "autoprefixer": "^10.4.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "lerna": "^4.0.0",
     "rollup": "^2.61.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
