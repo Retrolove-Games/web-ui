@@ -6,8 +6,16 @@
   "author": "Konrad Fedorczyk <contact@realhe.ro>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "lerna run build --stream"
+  },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "@types/react": "^17.0.37",
+    "lerna": "^4.0.0",
+    "rollup": "^2.61.1",
+    "rollup-plugin-ts": "^2.0.4",
+    "tslib": "^1.14.1",
+    "typescript": "^4.5.4"
   },
   "workspaces": [
     "packages/*"
