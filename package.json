@@ -11,7 +11,9 @@
     "publish": "npm run build && lerna publish",
     "lint": "eslint packages/**/src/**/*",
     "lint:fix": "eslint packages/**/src/**/* --fix",
-    "lint:quiet": "eslint packages/**/src/**/* --quiet"
+    "lint:quiet": "eslint packages/**/src/**/* --quiet",
+    "tsm": "tsm packages",
+    "tsm:watch": "tsm --watch packages"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.1.1",
@@ -35,6 +37,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-ts": "^2.0.4",
     "tslib": "^1.14.1",
+    "typed-scss-modules": "^4.1.1",
     "typescript": "^4.5.4"
   },
   "workspaces": [
