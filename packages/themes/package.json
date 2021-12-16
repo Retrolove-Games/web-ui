@@ -1,0 +1,19 @@
+{
+  "name": "@retrolove-games/ui-themes",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run clean && rollup --config",
+    "clean": "rm -rf dist"
+  },
+  "author": "Konrad Fedorczyk",
+  "license": "ISC"
+}

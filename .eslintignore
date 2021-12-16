@@ -9,3 +9,4 @@ tsconfig.json
 *.css
 dist
 *.d.ts
+rollup.config.js
