@@ -5,8 +5,8 @@ Monorepo with Retrolove UI components.
 
 ## Scripts
 
-* `build` — build all packages.
-* `publish` — publish changed packages.
+* `build` — build all packages (using Lerna).
+* `publish` — publish changed packages (using Lerna).
 * `lint` — list linting errors.
 * `lint:fix` — lint & fix.
 * `lint:quiet` — lint & fix silently.
