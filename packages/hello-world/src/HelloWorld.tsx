@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 import React from "react";
-import { styled } from "@stitches/react";
+import { styled } from "@retrolove-games/ui-themes";
 
 const Button = styled("button", {
-  backgroundColor: "gainsboro",
+  backgroundColor: "$primary",
   borderRadius: "9999px",
   fontSize: "13px",
   padding: "10px 15px",
