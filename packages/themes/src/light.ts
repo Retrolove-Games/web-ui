@@ -6,7 +6,7 @@ export const {
   globalCss,
   keyframes,
   getCssText,
-  theme: light,
+  theme,
   createTheme,
   config,
 } = createStitches({
