@@ -14,7 +14,10 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: ["./tsconfig.common.json"],
+    project: [
+      "tsconfig.common.json"
+    ],
+    tsconfigRootDir: __dirname,
     extraFileExtensions: [".css"],
     ecmaFeatures: {
       jsx: true,
@@ -22,8 +25,11 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
+  ignorePatterns: ["**/*.d.ts", ".eslintrc.js"],
   plugins: ["react", "@typescript-eslint"],
-  rules: {},
+  rules: {
+    "import/prefer-default-export": "off",
+  },
   settings: {
     react: {
       version: "17.0.0",
