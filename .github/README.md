@@ -8,6 +8,9 @@
 
 Monorepo with Retrolove Shop UI components.
 
+Inspired by:
+
+* [Atlassian](https://atlassian.design/components)
 
 ## Scripts
 
