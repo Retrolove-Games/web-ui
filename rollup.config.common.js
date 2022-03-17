@@ -1,6 +1,7 @@
 import ts from "rollup-plugin-ts";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 // import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import svgr from "@svgr/rollup";
 import { terser } from "rollup-plugin-terser";
 import commonjs from "@rollup/plugin-commonjs";
 import externals from "rollup-plugin-node-externals";
@@ -23,6 +24,7 @@ export default (packageJson) => {
       externals(),
       nodeResolve(),
       commonjs(),
+      svgr(),
       ts(),
       /* postcss({
         plugins: [autoprefixer()],
