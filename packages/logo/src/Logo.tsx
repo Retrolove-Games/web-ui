@@ -5,6 +5,7 @@ import LogoDesktop from "./logo-standard.svg";
 const Wrapper = styled("span", {
   "& .letter": {
     fill: "$dark500",
+    transition: "color .25s ease-out"
   },
   [`.${darkTheme} &`]: {
     "& .letter": {
