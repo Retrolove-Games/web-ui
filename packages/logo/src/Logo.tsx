@@ -1,4 +1,24 @@
 import React from "react";
-import LogoSvg from "./logo-standard.svg";
+import { styled, darkTheme } from "@retrolove-games/ui-themes";
+import LogoDesktop from "./logo-standard.svg";
 
-export const Logo = () => <LogoSvg />;
+const Wrapper = styled("span", {
+  "& .letter": {
+    fill: "$dark500",
+  },
+  [`.${darkTheme} &`]: {
+    "& .letter": {
+      fill: "$white100",
+    },
+  }
+});
+
+export const Logo = () => {
+  const a = 1;
+
+  return (
+    <Wrapper>
+      <LogoDesktop />
+    </Wrapper>
+  );
+};
