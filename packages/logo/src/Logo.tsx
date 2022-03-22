@@ -1,24 +1,48 @@
+/* eslint-disable arrow-body-style */
 import React from "react";
 import { styled, darkTheme } from "@retrolove-games/ui-themes";
-import LogoDesktop from "./logo-standard.svg";
+import { VariantProps } from '@stitches/react';
 
 const Wrapper = styled("span", {
+  display: "inline-block",
+
+  "& svg": {
+    height: "100%",
+    width: "auto"
+  },
+
+  // SVG colors
   "& .letter": {
     fill: "$dark500",
-    transition: "fill .25s ease-out"
+    transition: "fill .25s ease-out",
   },
+
   [`.${darkTheme} &`]: {
     "& .letter": {
       fill: "$white1000",
     },
-  }
+  },
+
+  // Variants
+  variants: {
+    size: {
+      small: {
+        height: "40px",
+      },
+    },
+  },
 });
 
-// eslint-disable-next-line arrow-body-style
-export const Logo = () => {
+export type LogoProps = VariantProps<typeof Wrapper>;
+
+export const Logo: React.FC<LogoProps> = ({
+  children,
+  size = "small",
+  ...props
+}) => {
   return (
-    <Wrapper>
-      <LogoDesktop />
+    <Wrapper aria-label="Retrolove Shop" role="img" size={size} {...props}>
+      {children}
     </Wrapper>
   );
 };
