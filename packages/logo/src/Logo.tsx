@@ -13,9 +13,8 @@ const Wrapper = styled("span", {
   }
 });
 
+// eslint-disable-next-line arrow-body-style
 export const Logo = () => {
-  const a = 1;
-
   return (
     <Wrapper>
       <LogoDesktop />
