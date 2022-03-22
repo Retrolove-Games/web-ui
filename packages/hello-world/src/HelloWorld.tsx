@@ -12,9 +12,9 @@ const Button = styled("button", {
   },
 });
 
-const HelloWorld = () => (
+const HelloWorld: React.FC<{test: string}> = ({test = "dupa"}) => (
   <h1>
-    Hello, World!{" "}
+    Hello, World! {test}
     <Button onClick={() => console.log("Cholibka!")}>Cholibka!</Button>
   </h1>
 );
