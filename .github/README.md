@@ -36,6 +36,6 @@ npm install --save "[local path]/web-ui/packages/hello-world"
 
 ## Possible problems
 
-* Please remember that `Rollup` by default will try to bundle everything into packages. Add dependencies to `package.json` file of each package or use `externals` option in Rollup config.
+* Please remember that `Rollup` by default will try to bundle everything into packages. Add dependencies to `package.json` file of each package or use `externals` option in `Rollup` config.
 
 * Packages won't build on `TS` > 4.5.5. `VSC` might enforce newer version!
