@@ -8,7 +8,7 @@ const Wrapper = styled("span", {
   },
   [`.${darkTheme} &`]: {
     "& .letter": {
-      fill: "$white100",
+      fill: "$white1000",
     },
   }
 });
