@@ -30,6 +30,9 @@ const Wrapper = styled("span", {
       small: {
         height: "40px",
       },
+      medium: {
+        height: "60px",
+      },
     },
   },
 });
