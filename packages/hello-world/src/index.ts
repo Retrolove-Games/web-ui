@@ -1,3 +1,1 @@
-import HelloWorld from "./HelloWorld";
-
-export default HelloWorld;
+export * from "./HelloWorld";
