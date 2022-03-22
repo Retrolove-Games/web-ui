@@ -13,7 +13,9 @@ export const {
   theme: {
     colors: {
       dark500: "#252220",
-      white1000: "#ffffff"
+      darkDefault: "$dark500",
+      white1000: "#ffffff",
+      whiteDefault: "$white1000"
     },
   },
 });
