@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable arrow-body-style */
 import React from "react";
 import { styled, darkTheme } from "@retrolove-games/ui-themes";
@@ -33,9 +34,12 @@ const Wrapper = styled("span", {
   },
 });
 
-export type LogoProps = VariantProps<typeof Wrapper>;
+export type LogoVariants = VariantProps<typeof Wrapper>;
+export type LogoProps = React.FC<LogoVariants>;
 
-export const Logo: React.FC<LogoProps> = ({
+// export type LogoPropsWithoutChildren = React.VoidFunctionComponent<>;
+
+export const Logo: LogoProps = ({
   children,
   size = "small",
   ...props
