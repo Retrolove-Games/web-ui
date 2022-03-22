@@ -24,7 +24,16 @@ export default (packageJson) => {
       externals(),
       nodeResolve(),
       commonjs(),
-      svgr(),
+      svgr({
+        svgoConfig: {
+          plugins: [
+            {
+              name: "prefixIds",
+              active: false,
+            },
+          ],
+        },
+      }),
       ts(),
       /* postcss({
         plugins: [autoprefixer()],
