@@ -14,13 +14,13 @@ const Wrapper = styled("span", {
 
   // SVG colors
   "& .letter": {
-    fill: "$dark500",
+    fill: "$darkDefault",
     transition: "fill .25s ease-out",
   },
 
   [`.${darkTheme} &`]: {
     "& .letter": {
-      fill: "$white1000",
+      fill: "$whiteDefault",
     },
   },
 
