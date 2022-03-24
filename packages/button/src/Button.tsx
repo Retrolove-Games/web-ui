@@ -6,7 +6,7 @@ import { VariantProps } from "@stitches/react";
 
 const Wrapper = styled("button", {
   display: "inline-block",
-
+  fontFamily: "$primary",
   // Variants
   variants: {
     color: {
