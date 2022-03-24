@@ -7,14 +7,19 @@ import { VariantProps } from "@stitches/react";
 const Wrapper = styled("button", {
   display: "inline-block",
   fontFamily: "$primary",
+  border: "solid 2px White",
+  borderRadius: "8px",
+  backgroundColor: "transparent",
+  padding: "0 10px",
+
   // Variants
   variants: {
     color: {
       red: {
-        backgroundColor: "$redDefault"
+        borderColor: "$redDefault"
       },
       neonBlue: {
-        backgroundColor: "$neonBlueDefault"
+        borderColor: "$neonBlueDefault"
       }
     }
   }
@@ -36,7 +41,7 @@ export const Button = <T extends ElementType = "button">({
 
   return (
     <Wrapper as={component} color={color} {...props}>
-      {children}
+      <span>{children}</span>
     </Wrapper>
   );
 };
