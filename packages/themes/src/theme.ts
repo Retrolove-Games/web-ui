@@ -15,5 +15,9 @@ export const {
     colors: {
       ...colors
     },
+    fonts: {
+      primary: `'Source Sans Pro', sans-serif`,
+      secondary: `'Zilla Slab Highlight', cursive`,
+    }
   },
 });
