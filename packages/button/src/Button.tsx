@@ -25,7 +25,7 @@ const Wrapper = styled("button", {
       red: {
         borderColor: "$redDefault",
         color: "$redDefault",
-        "&:hover": {
+        "&:hover, &:focus": {
           backgroundColor: "$redDefault",
           color: "$darkDefault",
         }
@@ -33,7 +33,7 @@ const Wrapper = styled("button", {
       neonBlue: {
         borderColor: "$neonBlueDefault",
         color: "$neonBlueDefault",
-        "&:hover": {
+        "&:hover, &:focus": {
           backgroundColor: "$neonBlueDefault",
           color: "$darkDefault",
         }
