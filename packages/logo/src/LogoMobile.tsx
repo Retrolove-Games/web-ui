@@ -1,8 +1,10 @@
 import React from "react";
-import { Logo, LogoProps } from "./Logo";
+import { Logo, ComponentVariants } from "./Logo";
 import LogoSvg from "./logo-mobile.svg";
 
-export const LogoMobile: React.VoidFunctionComponent<LogoProps> = (props) => (
+export const LogoMobile: React.VoidFunctionComponent<ComponentVariants> = (
+  props
+) => (
   <Logo {...props}>
     <LogoSvg />
   </Logo>

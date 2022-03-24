@@ -37,10 +37,10 @@ const Wrapper = styled("span", {
   },
 });
 
-export type LogoVariants = VariantProps<typeof Wrapper>;
-export type LogoProps = React.FC<LogoVariants>;
+export type ComponentVariants = VariantProps<typeof Wrapper>;
+export type ComponentType = React.FC<ComponentVariants>;
 
-export const Logo: LogoProps = ({
+export const Logo: ComponentType = ({
   children,
   size = "small",
   ...props
