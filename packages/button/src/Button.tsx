@@ -6,13 +6,17 @@ import { VariantProps } from "@stitches/react";
 
 const Wrapper = styled("button", {
   display: "inline-flex",
+  justifyContent: "center",
+  alignItems: "center",
+
   fontFamily: "$primary",
   border: "solid 2px White",
   borderRadius: "8px",
   backgroundColor: "transparent",
   padding: "0 10px",
   fontSize: "$desktopSmall",
-  lineHeight: "$lh1618",
+  lineHeight: "$lh13",
+  boxShadow: "none",
 
   // Variants
   variants: {
@@ -24,6 +28,12 @@ const Wrapper = styled("button", {
       neonBlue: {
         borderColor: "$neonBlueDefault",
         color: "$neonBlueDefault",
+      }
+    },
+
+    size: {
+      medium: {
+        height: "40px",
       }
     }
   }
