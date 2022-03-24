@@ -27,6 +27,7 @@ const Wrapper = styled("button", {
         color: "$redDefault",
         "&:hover": {
           backgroundColor: "$redDefault",
+          color: "darkDefault",
         }
       },
       neonBlue: {
@@ -34,6 +35,7 @@ const Wrapper = styled("button", {
         color: "$neonBlueDefault",
         "&:hover": {
           backgroundColor: "$neonBlueDefault",
+          color: "darkDefault",
         }
       },
     },
