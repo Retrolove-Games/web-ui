@@ -5,21 +5,25 @@ import { styled } from "@retrolove-games/ui-themes";
 import { VariantProps } from "@stitches/react";
 
 const Wrapper = styled("button", {
-  display: "inline-block",
+  display: "inline-flex",
   fontFamily: "$primary",
   border: "solid 2px White",
   borderRadius: "8px",
   backgroundColor: "transparent",
   padding: "0 10px",
+  fontSize: "$desktopSmall",
+  lineHeight: "$lh12",
 
   // Variants
   variants: {
     color: {
       red: {
-        borderColor: "$redDefault"
+        borderColor: "$redDefault",
+        color: "$redDefault",
       },
       neonBlue: {
-        borderColor: "$neonBlueDefault"
+        borderColor: "$neonBlueDefault",
+        color: "$neonBlueDefault",
       }
     }
   }
@@ -40,7 +44,7 @@ export const Button = <T extends ElementType = "button">({
   const component = as || "button";
 
   return (
-    <Wrapper as={component} color={color} {...props}>
+    <Wrapper as={component} type="button" color={color} {...props}>
       <span>{children}</span>
     </Wrapper>
   );
