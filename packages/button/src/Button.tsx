@@ -17,6 +17,7 @@ const Wrapper = styled("button", {
   fontSize: "$desktopSmall",
   lineHeight: "$lh13",
   boxShadow: "none",
+  cursor: "pointer",
 
   // Variants
   variants: {
@@ -24,10 +25,16 @@ const Wrapper = styled("button", {
       red: {
         borderColor: "$redDefault",
         color: "$redDefault",
+        "&:hover": {
+          backgroundColor: "$redDefault",
+        }
       },
       neonBlue: {
         borderColor: "$neonBlueDefault",
         color: "$neonBlueDefault",
+        "&:hover": {
+          backgroundColor: "$neonBlueDefault",
+        }
       },
     },
 
