@@ -28,15 +28,15 @@ const Wrapper = styled("button", {
       neonBlue: {
         borderColor: "$neonBlueDefault",
         color: "$neonBlueDefault",
-      }
+      },
     },
 
     size: {
       medium: {
         height: "40px",
-      }
-    }
-  }
+      },
+    },
+  },
 });
 
 export type ComponentVariants = VariantProps<typeof Wrapper>;
@@ -49,12 +49,13 @@ export const Button = <T extends ElementType = "button">({
   as,
   children,
   color = "neonBlue",
+  size = "medium",
   ...props
 }: ButtonProps<T> & ComponentPropsWithoutRef<T> & ComponentVariants) => {
   const component = as || "button";
 
   return (
-    <Wrapper as={component} type="button" color={color} {...props}>
+    <Wrapper as={component} type="button" color={color} size={size} {...props}>
       <span>{children}</span>
     </Wrapper>
   );
