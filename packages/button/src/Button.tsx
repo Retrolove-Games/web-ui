@@ -12,7 +12,7 @@ const Wrapper = styled("button", {
   backgroundColor: "transparent",
   padding: "0 10px",
   fontSize: "$desktopSmall",
-  lineHeight: "$lh12",
+  lineHeight: "$lh1618",
 
   // Variants
   variants: {
