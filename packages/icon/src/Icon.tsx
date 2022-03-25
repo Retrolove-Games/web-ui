@@ -32,6 +32,14 @@ const Wrapper = styled("span", {
         height: "60px",
       },
     },
+    color: {
+      red: {
+        fill: "$redDefault",
+      },
+      neonBlue: {
+        fill: "$neonBlueDefault",
+      }
+    }
   },
 });
 
