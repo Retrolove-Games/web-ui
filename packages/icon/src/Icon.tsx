@@ -35,12 +35,12 @@ const Wrapper = styled("span", {
     color: {
       red: {
         "& .primary-fill": {
-          fill: "$redDefault",
+          fill: "$redDefault !important",
         },
       },
       neonBlue: {
         "& .primary-fill": {
-          fill: "$neonBlueDefault",
+          fill: "$neonBlueDefault !important",
         },
       },
     },
