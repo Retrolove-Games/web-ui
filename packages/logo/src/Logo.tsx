@@ -1,15 +1,13 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable arrow-body-style */
 import React from "react";
 import { styled, darkTheme } from "@retrolove-games/ui-themes";
-import { VariantProps } from '@stitches/react';
+import { VariantProps } from "@stitches/react";
 
 const Wrapper = styled("span", {
   display: "inline-block",
 
   "& svg": {
     height: "100%",
-    width: "auto"
+    width: "auto",
   },
 
   // SVG colors
@@ -40,14 +38,8 @@ const Wrapper = styled("span", {
 export type ComponentVariants = VariantProps<typeof Wrapper>;
 export type ComponentType = React.FC<ComponentVariants>;
 
-export const Logo: ComponentType = ({
-  children,
-  size = "small",
-  ...props
-}) => {
-  return (
-    <Wrapper aria-label="Retrolove Shop" role="img" size={size} {...props}>
-      {children}
-    </Wrapper>
-  );
-};
+export const Logo: ComponentType = ({ children, size = "small", ...props }) => (
+  <Wrapper aria-label="Retrolove Shop" role="img" size={size} {...props}>
+    {children}
+  </Wrapper>
+);
