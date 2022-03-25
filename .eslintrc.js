@@ -29,6 +29,7 @@ module.exports = {
   plugins: ["react", "@typescript-eslint"],
   rules: {
     "import/prefer-default-export": "off",
+    "react/prop-types": "off",
   },
   settings: {
     react: {
