@@ -1,6 +1,7 @@
 import React from "react";
 import { styled, darkTheme } from "@retrolove-games/ui-themes";
 import { VariantProps } from "@stitches/react";
+import { SIZE_VARIANTS } from "./config";
 
 const Wrapper = styled("span", {
   display: "inline-block",
@@ -25,15 +26,7 @@ const Wrapper = styled("span", {
   // Variants
   variants: {
     size: {
-      xsmall: {
-        height: "12px",
-      },
-      small: {
-        height: "24px",
-      },
-      medium: {
-        height: "48px",
-      },
+      ...SIZE_VARIANTS
     },
     color: {
       red: {
