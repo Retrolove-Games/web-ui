@@ -3,3 +3,4 @@ export * from "./IconUser";
 export * from "./IconClose";
 export * from "./IconBasket";
 export * from "./IconFacebook";
+export * from "./IconMoon";
