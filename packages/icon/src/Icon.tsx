@@ -25,11 +25,14 @@ const Wrapper = styled("span", {
   // Variants
   variants: {
     size: {
+      xsmall: {
+        height: "12px",
+      },
       small: {
         height: "24px",
       },
       medium: {
-        height: "60px",
+        height: "48px",
       },
     },
     color: {
