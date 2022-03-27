@@ -13,9 +13,11 @@ export default (packageJson) => {
     input: "src/index.ts",
     output: [
       {
-        file: packageJson.main,
+        // file: packageJson.main,
+        dir: "dist",
         format: "esm",
         sourcemap: true,
+        preserveModules: true
       },
     ],
     // external: ["@retrolove-games/ui-themes", "react"],
