@@ -20,7 +20,7 @@ const Wrapper = styled("div", {
     position: "absolute",
     left: 0,
     top: 0,
-    border: "solid 1px $redBorder",
+    niceBorder2px: "$redDefault",
   },
 
   // Color theme
