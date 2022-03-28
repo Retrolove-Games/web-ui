@@ -5,8 +5,9 @@ import { VariantProps } from "@stitches/react";
 const Wrapper = styled("div", {
   display: "inline-flex",
 
-  border: "solid 1px $redDefault",
-  boxShadow: "0 0 2px 0 $redBorder",
+  // border: "solid 1px $redDefault",
+  // boxShadow: "0 0 2px 0 $redBorder",
+  niceBorder: "$redDefault",
 
   "& input": {
     visibility: "hidden",
@@ -26,8 +27,9 @@ const Wrapper = styled("div", {
 
   // Color theme
   [`.${darkTheme} &`]: {
-    border: "solid 1px $neonBlueDefault",
-    boxShadow: "0 0 2px 0 $neonBlueBorder",
+    // border: "solid 1px $neonBlueDefault",
+    // boxShadow: "0 0 2px 0 $neonBlueBorder",
+    niceBorder: "$neonBlueDefault",
   },
 
   // Variants
