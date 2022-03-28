@@ -6,7 +6,7 @@ const Wrapper = styled("div", {
   display: "inline-flex",
   // border: "solid 1px $redDefault",
 
-  boxShadow: "0 0 2px 0 $redDefault",
+  boxShadow: "0 0 2px 0 $redBorder",
 
   "& input": {
     visibility: "hidden",
@@ -21,13 +21,13 @@ const Wrapper = styled("div", {
   "& .switch-marker": {
     position: "absolute",
     left: 0,
-    border: "solid 1px $redDefault",
+    border: "solid 1px $redBorder",
   },
 
   // Color theme
   [`.${darkTheme} &`]: {
     // border: "solid 1px $neonBlueDefault",
-    boxShadow: "0 0 2px 0 $neonBlueDefault",
+    boxShadow: "0 0 2px 0 $neonBlueBorder",
   },
 
   // Variants
