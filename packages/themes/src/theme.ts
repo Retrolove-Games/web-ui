@@ -13,7 +13,7 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      ...colors
+      ...colors,
     },
     fonts: {
       primary: `'Source Sans Pro', sans-serif`,
@@ -21,7 +21,7 @@ export const {
     },
     fontSizes: {
       desktopSmall: "1.04rem",
-      desktopDefault: "1.25rem"
+      desktopDefault: "1.25rem",
     },
     lineHeights: {
       lh: "1em",
@@ -35,6 +35,12 @@ export const {
     shadows: {
       neonBlueBorder: "rgba(127, 212, 202, .29)",
       redBorder: "rgba(233, 55, 80, .29)",
-    }
+    },
+  },
+  utils: {
+    niceBorder: (color: string) => ({
+      border: `solid 1px ${color}`,
+      boxShadow: `0 0 2px 0 ${color}Border`,
+    }),
   },
 });
