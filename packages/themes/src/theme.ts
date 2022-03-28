@@ -33,8 +33,8 @@ export const {
       lh1842: "1.842em",
     },
     shadows: {
-      neonBlueBorder: "rgba(127, 212, 202, .29)",
-      redBorder: "rgba(233, 55, 80, .29)",
+      neonBlueDefaultBorder: "rgba(127, 212, 202, .29)",
+      redDefaultBorder: "rgba(233, 55, 80, .29)",
     },
   },
   utils: {
