@@ -31,6 +31,10 @@ export const {
       lh15: "1.5em",
       lh1618: "1.618em",
       lh1842: "1.842em",
+    },
+    shadows: {
+      neonBlueBorder: "rgba(127, 212, 202, .29)",
+      redBorder: "rgba(233, 55, 80, .29)",
     }
   },
 });
