@@ -38,9 +38,9 @@ export const {
     },
   },
   utils: {
-    niceBorder: (color: string) => ({
-      border: `solid 1px ${color}`,
-      boxShadow: `0 0 2px 0 ${color}Border`,
+    niceBorder: (color: string, width = 2) => ({
+      border: `solid ${width}px ${color}`,
+      boxShadow: `0 0 ${width + 2}px 0 ${color}Border`,
     }),
   },
 });
