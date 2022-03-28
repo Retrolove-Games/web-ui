@@ -4,11 +4,30 @@ import { VariantProps } from "@stitches/react";
 
 const Wrapper = styled("div", {
   display: "inline-flex",
-  border: "solid 1px $redDefault",
+  // border: "solid 1px $redDefault",
+
+  boxShadow: "0 0 2px 0 $redDefault",
+
+  "& input": {
+    visibility: "hidden",
+    height: 0,
+    width: 0,
+  },
+
+  "& label": {
+    position: "relative"
+  },
+
+  "& .switch-marker": {
+    position: "absolute",
+    left: 0,
+    border: "solid 1px $redDefault",
+  },
 
   // Color theme
   [`.${darkTheme} &`]: {
-    border: "solid 1px $neonBlueDefault",
+    // border: "solid 1px $neonBlueDefault",
+    boxShadow: "0 0 2px 0 $neonBlueDefault",
   },
 
   // Variants
@@ -16,6 +35,7 @@ const Wrapper = styled("div", {
     size: {
       small: {
         height: "32px",
+        width: "80px",
         borderRadius: "16px",
       },
       medium: {
@@ -45,7 +65,7 @@ export const Switch: ComponentType = ({
   <Wrapper size={size} {...props}>
     <input id={id} type="checkbox" checked={isOn} onChange={handleToggle} />
     <label htmlFor={id}>
-      <span />
+      <span className="switch-marker" />
     </label>
   </Wrapper>
 );
