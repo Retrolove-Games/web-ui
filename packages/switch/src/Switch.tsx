@@ -28,6 +28,16 @@ const Wrapper = styled("div", {
     transition: "all .25s ease-in-out",
   },
 
+  "& .icon": {
+    position: "absolute",
+    textAlign: "center",
+    top: 0,
+  },
+
+  "& .icon:nth-of-type(1)": {
+    right: 0,
+  },
+
   // Color theme
   [`.${darkTheme} &`]: {
     niceBorder1px: "$neonBlueDefault",
@@ -52,7 +62,13 @@ const Wrapper = styled("div", {
 
         "& input:checked + label .switch-marker": {
           transform: "translate3d(calc(80px - 32px), 0, 0)",
-        }
+        },
+
+        "& .icon": {
+          height: "32px",
+          width: "32px",
+          lineHeight: "32px"
+        },
       }
     },
   },
@@ -81,9 +97,9 @@ export const Switch: ComponentType = ({
   <Wrapper size={size} {...props}>
     <input id={id} type="checkbox" checked={isOn} onChange={handleToggle} />
     <label htmlFor={id}>
-      { leftIcon && <span className="left-icon">{leftIcon}</span> }
+      { leftIcon && <span className="icon">{leftIcon}</span> }
       <span className="switch-marker" />
-      { rightIcon && <span className="right-icon">{rightIcon}</span> }
+      { rightIcon && <span className="icon">{rightIcon}</span> }
     </label>
   </Wrapper>
 );
