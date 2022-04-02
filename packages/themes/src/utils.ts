@@ -2,7 +2,7 @@ import type { Colors } from "./colors";
 
 const niceBorder = (color: Colors, width = 1) => ({
   outline: `solid ${width}px ${color}`,
-  boxShadow: `0 0 ${width + 1}px 0 ${color}`,
+  boxShadow: `0 0 ${width + 1}px 0 ${color} inset`,
 });
 
 export const utils = {
