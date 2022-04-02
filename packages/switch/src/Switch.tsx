@@ -12,6 +12,7 @@ const Wrapper = styled("div", {
     visibility: "hidden",
     height: 0,
     width: 0,
+    position: "absolute"
   },
 
   "& label": {
