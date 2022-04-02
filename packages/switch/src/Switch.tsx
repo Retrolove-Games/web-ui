@@ -60,8 +60,10 @@ const Wrapper = styled("div", {
 
 type ComponentProps = {
   id: string;
-  isOn?: boolean;
+  isOn: boolean;
   handleToggle: (event?: React.FormEvent<HTMLInputElement>) => void;
+  leftIcon?: React.ReactElement;
+  rightIcon?: React.ReactElement;
 };
 
 export type ComponentVariants = VariantProps<typeof Wrapper>;
@@ -69,15 +71,19 @@ export type ComponentType = React.FC<ComponentVariants & ComponentProps>;
 
 export const Switch: ComponentType = ({
   id,
-  size = "small",
-  isOn = false,
+  isOn,
   handleToggle,
+  size = "small",
+  leftIcon,
+  rightIcon,
   ...props
 }) => (
   <Wrapper size={size} {...props}>
     <input id={id} type="checkbox" checked={isOn} onChange={handleToggle} />
     <label htmlFor={id}>
+      { leftIcon && <span className="left-icon">{leftIcon}</span> }
       <span className="switch-marker" />
+      { rightIcon && <span className="right-icon">{rightIcon}</span> }
     </label>
   </Wrapper>
 );
