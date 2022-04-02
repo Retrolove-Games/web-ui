@@ -3,7 +3,9 @@ import { styled, darkTheme } from "@retrolove-games/ui-themes";
 import { VariantProps } from "@stitches/react";
 
 const Wrapper = styled("div", {
-  display: "inline-flex",
+  display: "inline-block",
+  position: "relative",
+
   niceBorder1px: "$redDefault",
 
   "& input": {
@@ -13,14 +15,16 @@ const Wrapper = styled("div", {
   },
 
   "& label": {
-    position: "relative"
+    display: "block",
+    transition: "all .5s ease-out",
+    cursor: "pointer",
   },
 
   "& .switch-marker": {
-    position: "absolute",
-    left: 0,
-    top: 0,
     niceBorder1px: "$redDefault",
+    display: "block",
+    transform: "translate3d(0, 0, 0)",
+    transition: "all .25s ease-in-out",
   },
 
   // Color theme
@@ -32,20 +36,23 @@ const Wrapper = styled("div", {
   variants: {
     size: {
       small: {
-        height: "32px",
-        width: "80px",
         borderRadius: "16px",
+
+        "& label": {
+          height: "32px",
+          width: "80px",
+        },
+
         "& .switch-marker": {
           height: "32px",
           width: "32px",
           borderRadius: "16px",
-          display: "block",
+        },
+
+        "& input:checked + label .switch-marker": {
+          transform: "translate3d(calc(80px - 32px), 0, 0)",
         }
-      },
-      medium: {
-        height: "48px",
-        borderRadius: "24px",
-      },
+      }
     },
   },
 });
