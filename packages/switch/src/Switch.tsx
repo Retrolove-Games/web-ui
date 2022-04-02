@@ -12,7 +12,7 @@ const Wrapper = styled("div", {
     visibility: "hidden",
     height: 0,
     width: 0,
-    position: "absolute"
+    position: "absolute",
   },
 
   "& label": {
@@ -46,7 +46,7 @@ const Wrapper = styled("div", {
     niceBorder1px: "$neonBlueDefault",
     "& .switch-marker": {
       niceBorder1px: "$neonBlueDefault",
-    }
+    },
   },
 
   // Variants
@@ -74,7 +74,7 @@ const Wrapper = styled("div", {
           height: "32px",
           width: "32px",
         },
-      }
+      },
     },
   },
 });
@@ -99,12 +99,12 @@ export const Switch: ComponentType = ({
   rightIcon,
   ...props
 }) => (
-  <Wrapper size={size} {...props}>
+  <Wrapper role="button" aria-pressed={isOn} size={size} {...props}>
     <input id={id} type="checkbox" checked={isOn} onChange={handleToggle} />
     <label htmlFor={id}>
-      { leftIcon && <span className="icon">{leftIcon}</span> }
+      {leftIcon && <span className="icon">{leftIcon}</span>}
       <span className="switch-marker" />
-      { rightIcon && <span className="icon">{rightIcon}</span> }
+      {rightIcon && <span className="icon">{rightIcon}</span>}
     </label>
   </Wrapper>
 );
