@@ -6,6 +6,6 @@ const niceBorder = (color: Colors, width = 1) => ({
 });
 
 export const utils = {
-  niceBorder1px: (color: Colors) => niceBorder(color, 2),
+  niceBorder1px: (color: Colors) => niceBorder(color, 1),
   niceBorder2px: (color: Colors) => niceBorder(color, 2),
 };
