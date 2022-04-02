@@ -32,6 +32,9 @@ const Wrapper = styled("div", {
     position: "absolute",
     textAlign: "center",
     top: 0,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   "& .icon:nth-of-type(1)": {
@@ -67,7 +70,6 @@ const Wrapper = styled("div", {
         "& .icon": {
           height: "32px",
           width: "32px",
-          lineHeight: "32px"
         },
       }
     },
