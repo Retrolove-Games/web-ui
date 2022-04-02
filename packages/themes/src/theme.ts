@@ -1,5 +1,6 @@
 import { createStitches } from "@stitches/react";
 import { colors } from "./colors";
+import { utils } from "./utils";
 
 export const {
   styled,
@@ -38,9 +39,6 @@ export const {
     },
   },
   utils: {
-    niceBorder2px: (color: string, width = 2) => ({
-      border: `solid ${width}px ${color}`,
-      boxShadow: `0 0 ${width + 2}px 0 ${color}Border`,
-    }),
+    ...utils,
   },
 });

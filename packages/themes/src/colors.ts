@@ -1,3 +1,5 @@
+export type Colors = keyof typeof colors;
+
 export const colors = {
   // Dark
   dark500: "#252220",
