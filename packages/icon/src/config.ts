@@ -1,6 +1,6 @@
 export const SIZE_VARIANTS = {
   xsmall: {
-    height: "12px",
+    height: "14px",
   },
   small: {
     height: "24px",
