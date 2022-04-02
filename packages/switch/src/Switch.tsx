@@ -4,7 +4,7 @@ import { VariantProps } from "@stitches/react";
 
 const Wrapper = styled("div", {
   display: "inline-flex",
-  niceBorder2px: "$redDefault",
+  niceBorder1px: "$redDefault",
 
   "& input": {
     visibility: "hidden",
@@ -20,12 +20,12 @@ const Wrapper = styled("div", {
     position: "absolute",
     left: 0,
     top: 0,
-    niceBorder2px: "$redDefault",
+    niceBorder1px: "$redDefault",
   },
 
   // Color theme
   [`.${darkTheme} &`]: {
-    niceBorder2px: "$neonBlueDefault",
+    niceBorder1px: "$neonBlueDefault",
   },
 
   // Variants
