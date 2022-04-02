@@ -44,6 +44,9 @@ const Wrapper = styled("div", {
   // Color theme
   [`.${darkTheme} &`]: {
     niceBorder1px: "$neonBlueDefault",
+    "& .switch-marker": {
+      niceBorder1px: "$neonBlueDefault",
+    }
   },
 
   // Variants
