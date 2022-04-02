@@ -9,16 +9,21 @@ const Wrapper = styled("div", {
   niceBorder1px: "$redDefault",
 
   "& input": {
-    visibility: "hidden",
-    height: 0,
-    width: 0,
+    appearance: "none",
     position: "absolute",
+    width: "100%",
+    height: "100%",
+    left: 0,
+    top: 0,
+    backgroundColor: "transparent",
+    margin: 0,
+    zIndex: 1,
+    cursor: "pointer",
   },
 
-  "& label": {
+  "& .switch": {
     display: "block",
     transition: "all .5s ease-out",
-    cursor: "pointer",
   },
 
   "& .switch-marker": {
@@ -55,7 +60,7 @@ const Wrapper = styled("div", {
       small: {
         borderRadius: "16px",
 
-        "& label": {
+        "& .switch": {
           height: "32px",
           width: "80px",
         },
@@ -66,7 +71,7 @@ const Wrapper = styled("div", {
           borderRadius: "16px",
         },
 
-        "& input:checked + label .switch-marker": {
+        "& input:checked + .switch .switch-marker": {
           transform: "translate3d(calc(80px - 32px), 0, 0)",
         },
 
@@ -83,6 +88,7 @@ type ComponentProps = {
   id: string;
   isOn: boolean;
   handleToggle: (event?: React.FormEvent<HTMLInputElement>) => void;
+  label?: string;
   leftIcon?: React.ReactElement;
   rightIcon?: React.ReactElement;
 };
@@ -95,16 +101,23 @@ export const Switch: ComponentType = ({
   isOn,
   handleToggle,
   size = "small",
+  label,
   leftIcon,
   rightIcon,
   ...props
 }) => (
-  <Wrapper role="button" aria-pressed={isOn} size={size} {...props}>
-    <input id={id} type="checkbox" checked={isOn} onChange={handleToggle} />
-    <label htmlFor={id}>
+  <Wrapper size={size} {...props}>
+    <input
+      id={id}
+      type="checkbox"
+      aria-label={label}
+      checked={isOn}
+      onChange={handleToggle}
+    />
+    <div className="switch" aria-hidden="true" role="presentation">
       {leftIcon && <span className="icon">{leftIcon}</span>}
       <span className="switch-marker" />
       {rightIcon && <span className="icon">{rightIcon}</span>}
-    </label>
+    </div>
   </Wrapper>
 );
