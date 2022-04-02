@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable arrow-body-style */
 import React, { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
-import { styled } from "@retrolove-games/ui-themes";
+import { styled, darkTheme } from "@retrolove-games/ui-themes";
 import { VariantProps } from "@stitches/react";
 
 const Wrapper = styled("button", {
@@ -19,23 +19,46 @@ const Wrapper = styled("button", {
   boxShadow: "none",
   cursor: "pointer",
 
+  borderColor: "$redDefault",
+  color: "$redDefault",
+
+  "&:hover, &:focus": {
+    backgroundColor: "$redDefault",
+    color: "$whiteDefault",
+  },
+
+  [`.${darkTheme} &`]: {
+    borderColor: "$neonBlueDefault",
+    color: "$neonBlueDefault",
+
+    "&:hover, &:focus": {
+      backgroundColor: "$neonBlueDefault",
+      color: "$darkDefault",
+    }
+  },
+
   // Variants
   variants: {
     color: {
       red: {
-        borderColor: "$redDefault",
-        color: "$redDefault",
-        "&:hover, &:focus": {
-          backgroundColor: "$redDefault",
-          color: "$darkDefault",
-        }
+        [`&, .${darkTheme} &`]: {
+          borderColor: "$redDefault",
+          color: "$redDefault",
+
+          "&:hover, &:focus": {
+            backgroundColor: "$redDefault",
+          }
+        },
       },
+
       neonBlue: {
-        borderColor: "$neonBlueDefault",
-        color: "$neonBlueDefault",
-        "&:hover, &:focus": {
-          backgroundColor: "$neonBlueDefault",
-          color: "$darkDefault",
+        [`&, .${darkTheme} &`]: {
+          borderColor: "$neonBlueDefault",
+          color: "$neonBlueDefault",
+
+          "&:hover, &:focus": {
+            backgroundColor: "$neonBlueDefault",
+          }
         }
       },
     },
@@ -57,7 +80,7 @@ type ButtonProps<T extends ElementType> = {
 export const Button = <T extends ElementType = "button">({
   as,
   children,
-  color = "neonBlue",
+  color,
   size = "medium",
   ...props
 }: ButtonProps<T> & ComponentPropsWithoutRef<T> & ComponentVariants) => {
