@@ -9,18 +9,18 @@ const Wrapper = styled("button", {
   justifyContent: "center",
   alignItems: "center",
 
-  fontFamily: "$primary",
-  border: "solid 2px White",
+  border: "solid 2px $redDefault",
   borderRadius: "8px",
-  backgroundColor: "transparent",
   padding: "0 10px",
-  fontSize: "$desktopSmall",
-  lineHeight: "$lh13",
   boxShadow: "none",
-  cursor: "pointer",
+  backgroundColor: "transparent",
 
-  borderColor: "$redDefault",
+  fontFamily: "$primary",
+  fontSize: "$desktopSmall",
   color: "$redDefault",
+  lineHeight: "$lh13",
+
+  cursor: "pointer",
 
   "&:hover, &:focus": {
     backgroundColor: "$redDefault",
