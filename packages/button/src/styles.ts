@@ -60,6 +60,9 @@ export const Wrapper = styled("button", {
     },
 
     size: {
+      small: {
+        height: "20px",
+      },
       medium: {
         height: "40px",
       },

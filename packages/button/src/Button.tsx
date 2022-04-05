@@ -14,13 +14,16 @@ export const Button = <T extends ElementType = "button">({
   as,
   children,
   color,
-  size = "medium",
+  size,
   ...props
 }: ButtonProps<T> & ComponentPropsWithoutRef<T> & ComponentVariants) => {
   const component = as || "button";
 
   return (
-    <Wrapper as={component} type="button" color={color} size={size} {...props}>
+    <Wrapper as={component} type="button" color={color} size={size || {
+      '@initial': 'small',
+      '@medium': 'medium',
+    }} {...props}>
       <span>{children}</span>
     </Wrapper>
   );

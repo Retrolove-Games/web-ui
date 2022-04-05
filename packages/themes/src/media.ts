@@ -1,23 +1,31 @@
+type Variants = "landscape" | "portrait";
+type BaseQueries = keyof typeof media;
+type AllQueries = `${BaseQueries}${Capitalize<Variants>}` | BaseQueries;
+type MappedQueries = {
+  [Property in AllQueries]: string;
+};
+
 const portraitHelper = (media: string) =>
   `${media} and (orientation: portrait)`;
 const landscapeHelper = (media: string) =>
   `${media} and (orientation: landscape)`;
 
-export const media = {
+const media = {
   // Small
   small: "only screen and (max-width: 320px)",
-  get smallPortrait() {
-    return portraitHelper(this.small);
-  },
-  get smallLandscape() {
-    return landscapeHelper(this.small);
-  },
   // Medium
   medium: "only screen and (min-width: 768px)",
-  get mediumPortrait() {
-    return portraitHelper(this.medium);
-  },
-  get mediumLandscape() {
-    return landscapeHelper(this.medium);
-  },
 };
+
+// eslint-disable-next-line array-callback-return
+const additionalMedia = Object.keys(media).map((key) => ({
+  [`${key}Portrait`]: portraitHelper(media[key as BaseQueries]),
+  [`${key}Landscape`]: landscapeHelper(media[key as BaseQueries]),
+}));
+
+const decoratedMedia = {
+  ...media,
+  ...additionalMedia,
+} as unknown as MappedQueries;
+
+export { decoratedMedia as media };
