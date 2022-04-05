@@ -1,6 +1,7 @@
 import { createStitches } from "@stitches/react";
 import { colors } from "./colors";
 import { utils } from "./utils";
+import { media } from "./media";
 import { fonts, lineHeights, fontSizes, fontWeights } from "./typography";
 
 export const {
@@ -37,5 +38,8 @@ export const {
   },
   utils: {
     ...utils,
+  },
+  media: {
+    ...media,
   },
 });
