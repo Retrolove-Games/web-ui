@@ -17,7 +17,6 @@ const media = {
   medium: "only screen and (min-width: 768px)",
 };
 
-// eslint-disable-next-line array-callback-return
 const additionalMedia = Object.keys(media).map((key) => ({
   [`${key}Portrait`]: portraitHelper(media[key as BaseQueries]),
   [`${key}Landscape`]: landscapeHelper(media[key as BaseQueries]),
