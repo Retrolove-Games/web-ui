@@ -12,5 +12,8 @@ export const colors = {
   redDefault: "$red500",
   // Neon blue
   neonBlue500: "#7FD4CA",
-  neonBlueDefault: "$neonBlue500"
+  neonBlueDefault: "$neonBlue500",
+  // Purpureus
+  purpureus500: "#9055A2",
+  purpureusDefault: "$purpureus500",
 };
