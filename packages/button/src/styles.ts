@@ -1,4 +1,6 @@
 import { styled, darkTheme } from "@retrolove-games/ui-themes";
+import { RED_VARIANT, NEON_BLUE_VARIANT, PURPUREUS_VARIANT } from "./config";
+
 
 export const Wrapper = styled("button", {
   display: "inline-flex",
@@ -6,7 +8,7 @@ export const Wrapper = styled("button", {
   alignItems: "center",
   verticalAlign: "middle",
 
-  border: "solid 2px $redDefault",
+  border: "solid 2px",
   borderRadius: "8px",
   padding: "0 10px",
   boxShadow: "none",
@@ -14,24 +16,14 @@ export const Wrapper = styled("button", {
 
   fontFamily: "$primary",
   fontSize: "$desktopSmall",
-  color: "$redDefault",
   lineHeight: "$lh13",
 
   cursor: "pointer",
 
-  "&:hover, &:focus": {
-    backgroundColor: "$redDefault",
-    color: "$whiteDefault",
-  },
+  ...RED_VARIANT,
 
   [`.${darkTheme} &`]: {
-    borderColor: "$neonBlueDefault",
-    color: "$neonBlueDefault",
-
-    "&:hover, &:focus": {
-      backgroundColor: "$neonBlueDefault",
-      color: "$darkDefault",
-    },
+    ...NEON_BLUE_VARIANT,
   },
 
   // Variants
@@ -39,23 +31,19 @@ export const Wrapper = styled("button", {
     color: {
       red: {
         [`&, .${darkTheme} &`]: {
-          borderColor: "$redDefault",
-          color: "$redDefault",
-
-          "&:hover, &:focus": {
-            backgroundColor: "$redDefault",
-          },
+          ...RED_VARIANT,
         },
       },
 
       neonBlue: {
         [`&, .${darkTheme} &`]: {
-          borderColor: "$neonBlueDefault",
-          color: "$neonBlueDefault",
+          ...NEON_BLUE_VARIANT,
+        },
+      },
 
-          "&:hover, &:focus": {
-            backgroundColor: "$neonBlueDefault",
-          },
+      purpureus: {
+        [`&, .${darkTheme} &`]: {
+          ...PURPUREUS_VARIANT,
         },
       },
     },
