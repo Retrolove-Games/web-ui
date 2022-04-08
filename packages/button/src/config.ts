@@ -1,3 +1,5 @@
+import { darkTheme } from "@retrolove-games/ui-themes";
+
 export const RED_VARIANT = {
   borderColor: "$redDefault",
   color: "$redDefault",
@@ -43,8 +45,15 @@ export const PURPUREUS_VARIANT = {
   },
 
   "&[disabled], &[disabled]:hover, &[disabled]:focus": {
-    borderColor: "$purpureus300",
-    color: "$purpureus300",
+    borderColor: "$purpureus800",
+    color: "$purpureus800",
     backgroundColor: "transparent",
+  },
+
+  [`.${darkTheme} &`]: {
+    "&[disabled], &[disabled]:hover, &[disabled]:focus": {
+      borderColor: "$purpureus300",
+      color: "$purpureus300",
+    }
   },
 };
