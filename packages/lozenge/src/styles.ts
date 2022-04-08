@@ -1,4 +1,4 @@
-import { styled } from "@retrolove-games/ui-themes";
+import { styled, buttonVariants } from "@retrolove-games/ui-themes";
 
 export const Wrapper = styled("span", {
   display: "inline-flex",
@@ -21,15 +21,7 @@ export const Wrapper = styled("span", {
   // Variants
   variants: {
     color: {
-      red: {
-        borderColor: "$redDefault",
-        color: "$redDefault",
-      },
-
-      neonBlue: {
-        borderColor: "$neonBlueDefault",
-        color: "$neonBlueDefault",
-      },
+      ...buttonVariants
     },
     size: {
       medium: {
