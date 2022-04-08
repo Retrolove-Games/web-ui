@@ -4,6 +4,7 @@ export const Wrapper = styled("button", {
   display: "inline-flex",
   justifyContent: "center",
   alignItems: "center",
+  verticalAlign: "middle",
 
   border: "solid 2px $redDefault",
   borderRadius: "8px",
