@@ -1,19 +1,55 @@
 export type Colors = keyof typeof colors;
 
 export const colors = {
-  // Dark
+  dark100: "#070706",
+  dark200: "#0f0e0d",
+  dark300: "#161413",
+  dark400: "#1e1b1a",
   dark500: "#252220",
+  dark600: "#514e4d",
+  dark700: "#7c7a79",
+  dark800: "#a8a7a6",
+  dark900: "#d3d3d2",
+  dark1000: "#e9e9e9",
   darkDefault: "$dark500",
-  // White
+
   white1000: "#ffffff",
   whiteDefault: "$white1000",
-  // Red
+
+  red100: "#2f0b10",
+  red200: "#5d1620",
+  red300: "#8c2130",
+  red400: "#ba2c40",
   red500: "#E93750",
+  red600: "#ed5f73",
+  red700: "#f28796",
+  red800: "#f6afb9",
+  red900: "#fbd7dc",
+  red1000: "#fdebee",
   redDefault: "$red500",
-  // Neon blue
+
+  neonBlue100: "#192a28",
+  neonBlue200: "#335551",
+  neonBlue300: "#4c7f79",
+  neonBlue400: "#66aaa2",
   neonBlue500: "#7FD4CA",
+  neonBlue600: "#99ddd5",
+  neonBlue700: "#b2e5df",
+  neonBlue800: "#cceeea",
+  neonBlue900: "#e5f6f4",
+  neonBlue1000: "#f2fbfa",
   neonBlueDefault: "$neonBlue500",
-  // Purpureus
+
+  purpureus100: "#1d1120",
+  purpureus200: "#3a2241",
+  purpureus300: "#563361",
+  purpureus400: "#734482",
   purpureus500: "#9055A2",
+  purpureus600: "#a677b5",
+  purpureus700: "#bc99c7",
+  purpureus800: "#d3bbda",
+  purpureus900: "#e9ddec",
+  purpureus1000: "#f4eef6",
+
   purpureusDefault: "$purpureus500",
 };
