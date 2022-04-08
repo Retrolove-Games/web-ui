@@ -3,6 +3,7 @@ import { SIZE_VARIANTS } from "./config";
 
 export const Wrapper = styled("span", {
   display: "inline-block",
+  verticalAlign: "middle",
 
   "& svg": {
     height: "100%",
