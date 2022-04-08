@@ -5,7 +5,7 @@ export const RED_VARIANT = {
   // Hovers
   "&:hover, &:focus": {
     backgroundColor: "$redDefault",
-    color: "$whiteDefault",
+    color: "$btnHoverText",
   },
 
   // Disabled state
@@ -23,7 +23,7 @@ export const NEON_BLUE_VARIANT = {
 
   "&:hover, &:focus": {
     backgroundColor: "$neonBlueDefault",
-    color: "$darkDefault",
+    color: "$btnHoverText",
   },
 
   "&[disabled], &[disabled]:hover, &[disabled]:focus": {
@@ -39,7 +39,7 @@ export const PURPUREUS_VARIANT = {
 
   "&:hover, &:focus": {
     backgroundColor: "$purpureusDefault",
-    color: "$darkDefault",
+    color: "$btnHoverText",
   },
 
   "&[disabled], &[disabled]:hover, &[disabled]:focus": {
