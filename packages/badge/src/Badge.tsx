@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import type { VariantProps } from "@stitches/react";
 import { Wrapper } from "./styles";
 
@@ -17,8 +17,24 @@ export const Badge: ComponentType = ({
   size = "small",
   label,
   ...props
-}) => (
-  <Wrapper aria-label={label} role="group" size={size} {...props}>
-    <span>{children > 9 ? `9+` : children}</span>
-  </Wrapper>
-);
+}) => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [children]);
+
+  return (
+    <Wrapper
+      className={animate ? "animate" : ""}
+      aria-label={label}
+      role="group"
+      size={size}
+      onAnimationEnd={() => setAnimate(false)}
+      {...props}
+    >
+      <span>{children > 9 ? `9+` : children}</span>
+    </Wrapper>
+  );
+};

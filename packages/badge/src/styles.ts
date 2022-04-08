@@ -1,4 +1,9 @@
-import { styled } from "@retrolove-games/ui-themes";
+import { styled, keyframes} from "@retrolove-games/ui-themes";
+
+const popIn = keyframes({
+  '0%': { transform: 'scale(1.5)' },
+  '100%': { transform: 'scale(1)' },
+});
 
 export const Wrapper = styled("div", {
   display: "inline-flex",
@@ -12,6 +17,10 @@ export const Wrapper = styled("div", {
   color: "$darkDefault",
   lineHeight: "$lh",
   fontWeight: "$primaryBold",
+
+  "&.animate": {
+    animation: `${popIn} 250ms`,
+  },
 
   // Variants
   variants: {
