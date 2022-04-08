@@ -52,4 +52,6 @@ export const colors = {
   purpureus1000: "#f4eef6",
 
   purpureusDefault: "$purpureus500",
+
+  btnHoverText: "$whiteDefault",
 };
