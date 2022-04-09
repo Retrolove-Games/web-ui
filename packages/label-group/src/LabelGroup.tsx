@@ -1,16 +1,20 @@
 import React from "react";
 import { Wrapper } from "./styles";
 
-type ComponentProps = {
-  left: React.ReactElement;
-  right: React.ReactElement;
+// eslint-disable-next-line @typescript-eslint/ban-types
+type ComponentProps = {};
+
+type SubComponents = {
+  left: React.FC;
+  right: React.FC;
 };
 
-export type ComponentType = React.VoidFunctionComponent<ComponentProps>;
+export type ComponentType = React.FC<ComponentProps>;
 
-export const LabelGroup: ComponentType = ({ left, right, ...props }) => (
-  <Wrapper {...props}>
-    <div className="left">{left}</div>
-    <div className="right">{right}</div>
-  </Wrapper>
-);
+export const LabelGroup: ComponentType & SubComponents = ({
+  children,
+  ...props
+}) => <Wrapper {...props}>{children}</Wrapper>;
+
+LabelGroup.left = ({ children }) => <div className="left">{children}</div>;
+LabelGroup.right = ({ children }) => <div className="right">{children}</div>;
