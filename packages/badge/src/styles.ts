@@ -13,10 +13,10 @@ export const Wrapper = styled("div", {
   backgroundColor: "$whiteDefault",
   rightTopShadow: "rgba(0, 0, 0, 0.25)",
 
-  fontFamily: "$primary",
+  fontFamily: "$body",
   color: "$darkDefault",
   lineHeight: "$lh",
-  fontWeight: "$primaryBold",
+  fontWeight: "$bodyBold",
 
   "&.animate": {
     animation: `${popIn} 250ms`,

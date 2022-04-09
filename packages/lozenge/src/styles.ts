@@ -11,12 +11,12 @@ export const Wrapper = styled("span", {
   boxShadow: "none",
   backgroundColor: "transparent",
 
-  fontFamily: "$primary",
+  fontFamily: "$body",
   fontSize: "$desktopSmall",
   color: "$neonBlueDefault",
   lineHeight: "$lh13",
   textTransform: "uppercase",
-  fontWeight: "$primaryBold",
+  fontWeight: "$bodyBold",
 
   // Variants
   variants: {

@@ -14,7 +14,7 @@ export const Wrapper = styled("button", {
   boxShadow: "none",
   backgroundColor: "transparent",
 
-  fontFamily: "$primary",
+  fontFamily: "$body",
   fontSize: "$desktopSmall",
   lineHeight: "$lh13",
 

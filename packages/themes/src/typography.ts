@@ -1,6 +1,6 @@
 export const fonts = {
-  primary: `'Source Sans Pro', sans-serif`,
-  secondary: `'Zilla Slab Highlight', cursive`,
+  body: `'Source Sans Pro', sans-serif`,
+  display: `'Zilla Slab Highlight', cursive`,
 }
 
 export const lineHeights = {
@@ -20,5 +20,5 @@ export const fontSizes = {
 }
 
 export const fontWeights = {
-  primaryBold: 600
+  bodyBold: 600
 }
