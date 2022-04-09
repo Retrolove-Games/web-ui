@@ -22,7 +22,6 @@ export const Badge: ComponentType = ({
 
   useEffect(() => {
     setAnimate(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children]);
 
   return (
