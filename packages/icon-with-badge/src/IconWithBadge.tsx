@@ -11,8 +11,6 @@ export type ComponentType = React.VoidFunctionComponent<ComponentProps>;
 export const IconWithBadge: ComponentType = ({ icon, badge, ...props }) => (
   <Wrapper {...props}>
     {icon}
-    <div className="badge">
-      {badge}
-    </div>
+    <div className="badge">{badge}</div>
   </Wrapper>
 );
