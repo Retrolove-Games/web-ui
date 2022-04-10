@@ -13,6 +13,18 @@ export type ComponentType = React.VoidFunctionComponent<
   ComponentVariants & ComponentProps
 >;
 
+const clampValue = (value: number, min: number, max: number): string => {
+  if (value < min) {
+    return `${min}`;
+  }
+
+  if (value > max) {
+    return `${max}+`;
+  }
+
+  return `${value}`;
+};
+
 export const Badge: ComponentType = ({
   children,
   size = "small",
@@ -21,19 +33,10 @@ export const Badge: ComponentType = ({
   ...props
 }) => {
   const [animate, setAnimate] = useState(false);
-  const [displayValue, setDisplayValue] = useState(String(children));
 
   useEffect(() => {
-    if (children < minValue) {
-      setDisplayValue(String(minValue));
-    } else if (children > 9) {
-      setDisplayValue("9+");
-    } else {
-      setDisplayValue(String(children));
-    }
-
     setAnimate(true);
-  }, [children, minValue]);
+  }, [children]);
 
   return (
     <Wrapper
@@ -44,7 +47,7 @@ export const Badge: ComponentType = ({
       onAnimationEnd={() => setAnimate(false)}
       {...props}
     >
-      <span>{displayValue}</span>
+      <span>{clampValue(children, minValue, 9)}</span>
     </Wrapper>
   );
 };
