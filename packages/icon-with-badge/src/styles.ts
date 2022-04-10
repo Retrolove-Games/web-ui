@@ -5,10 +5,11 @@ export const Wrapper = styled("div", {
   justifyContent: "center",
   alignItems: "center",
   verticalAlign: "middle",
+  position: "relative",
 
   "& .badge": {
-    position: "relative",
-    left: -10,
-    top: 10
+    position: "absolute",
+    left: 15,
+    top: 15
   }
 });

@@ -1,13 +1,20 @@
-import React from "react";
+import React, { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 import type { VariantProps } from "@stitches/react";
 import { Wrapper } from "./styles";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type ComponentProps = {};
+type ComponentProps<T extends ElementType> = {
+  as?: T;
+  children: ReactNode;
+} & ComponentPropsWithoutRef<T>;
 
 export type ComponentVariants = VariantProps<typeof Wrapper>;
-export type ComponentType = React.FC<ComponentVariants & ComponentProps>;
 
-export const Label: ComponentType = ({ children, ...props }) => (
-  <Wrapper {...props}>{children}</Wrapper>
+export const Label = <T extends ElementType = "label">({
+  children,
+  as,
+  ...props
+}: ComponentProps<T> & ComponentVariants) => (
+  <Wrapper as={as} {...props}>
+    {children}
+  </Wrapper>
 );
