@@ -1,30 +1,30 @@
+import { breakpoints } from "./breakpoints";
+
 type Variants = "landscape" | "portrait";
-type BaseQueries = keyof typeof media;
-type AllQueries = `${BaseQueries}${Capitalize<Variants>}` | BaseQueries;
+
+type DefaultQueries = keyof typeof breakpoints;
+
+type AllQueries = `${DefaultQueries}${Capitalize<Variants>}` | DefaultQueries;
+
 type MappedQueries = {
   [Property in AllQueries]: string;
 };
-
-const portraitHelper = (media: string) =>
+const mediaHelper = (media: string | number) =>
+  `only screen and (min-width: ${media}px)`;
+const portraitHelper = (media: string | number) =>
   `${media} and (orientation: portrait)`;
-const landscapeHelper = (media: string) =>
+const landscapeHelper = (media: string | number) =>
   `${media} and (orientation: landscape)`;
 
-const media = {
-  // Small
-  small: "only screen and (max-width: 320px)",
-  // Medium
-  medium: "only screen and (min-width: 768px)",
-};
+const media = Object.keys(breakpoints).map((key) => ({
+  [`${key}`]: mediaHelper(breakpoints[key as DefaultQueries]),
+  [`${key}Portrait`]: portraitHelper(
+    mediaHelper(breakpoints[key as DefaultQueries])
+  ),
+  [`${key}Landscape`]: landscapeHelper(
+    mediaHelper(breakpoints[key as DefaultQueries])
+  ),
+})) as unknown as MappedQueries;
 
-const additionalMedia = Object.keys(media).map((key) => ({
-  [`${key}Portrait`]: portraitHelper(media[key as BaseQueries]),
-  [`${key}Landscape`]: landscapeHelper(media[key as BaseQueries]),
-}));
 
-const decoratedMedia = {
-  ...media,
-  ...additionalMedia,
-} as unknown as MappedQueries;
-
-export { decoratedMedia as media };
+export { media };
