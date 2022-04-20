@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@retrolove-games/ui-themes": "^0.0.3",
-    "@stitches/react": "^1.2.7",
-    "usehooks-ts": "^2.5.1"
+    "@stitches/react": "^1.2.7"
   }
 }
