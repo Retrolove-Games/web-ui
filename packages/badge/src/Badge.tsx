@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useIsFirstRender } from "usehooks-ts";
+import React, { useState } from "react";
+import { useUpdateEffect } from "usehooks-ts";
 import type { VariantProps } from "@stitches/react";
 import { Wrapper } from "./styles";
 
@@ -34,12 +34,9 @@ export const Badge: ComponentType = ({
   ...props
 }) => {
   const [animate, setAnimate] = useState(false);
-  const isFirst = useIsFirstRender();
 
-  useEffect(() => {
-    if (!isFirst) {
-      setAnimate(true);
-    }
+  useUpdateEffect(() => {
+    setAnimate(true);
   }, [children]);
 
   return (
