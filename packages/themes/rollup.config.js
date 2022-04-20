@@ -1,4 +1,50 @@
-import defaultConfig from "../../rollup.config.common";
-import packageJson from "./package.json";
+import ts from "rollup-plugin-ts";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+// import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import svgr from "@svgr/rollup";
+import { terser } from "rollup-plugin-terser";
+import commonjs from "@rollup/plugin-commonjs";
+import externals from "rollup-plugin-node-externals";
+// import postcss from "rollup-plugin-postcss";
+// import autoprefixer from "autoprefixer";
 
-export default defaultConfig(packageJson);
+export default (packageJson) => {
+  return {
+    input: "src/index.ts",
+    output: [
+      {
+        dir: "dist",
+        format: "esm",
+        sourcemap: true,
+        preserveModules: true
+      },
+      {
+        file: "dist/index.cjs.js",
+        format: "cjs",
+        sourcemap: true,
+      },
+    ],
+    // external: ["@retrolove-games/ui-themes", "react"],
+    plugins: [
+      // peerDepsExternal(),
+      externals(),
+      nodeResolve(),
+      commonjs(),
+      svgr({
+        svgoConfig: {
+          plugins: [
+            {
+              name: "prefixIds",
+              active: false,
+            },
+          ],
+        },
+      }),
+      ts(),
+      /* postcss({
+        plugins: [autoprefixer()],
+      }), */
+      terser(),
+    ],
+  };
+};
