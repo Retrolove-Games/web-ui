@@ -9,6 +9,7 @@
   "scripts": {
     "build": "lerna run build --stream",
     "publish": "npm run build && lerna publish",
+    "bootstrap": "lerna bootstrap",
     "lint": "eslint packages/**/src/**/*",
     "lint:fix": "eslint packages/**/src/**/* --fix",
     "lint:quiet": "eslint packages/**/src/**/* --quiet",

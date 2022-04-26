@@ -23,6 +23,6 @@
   "license": "ISC",
   "gitHead": "0a681b5da407fb7eaac23d7b2ac2f934e90181d4",
   "dependencies": {
-    "@stitches/react": "^1.2.7"
+    "@stitches/react": "^1.2.8"
   }
 }
