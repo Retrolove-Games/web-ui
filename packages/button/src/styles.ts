@@ -46,6 +46,12 @@ export const Wrapper = styled("button", {
           ...PURPUREUS_VARIANT,
         },
       },
+
+      transparent: {
+        [`&, .${darkTheme} &`]: {
+          borderColor: "transparent",
+        },
+      },
     },
 
     size: {
