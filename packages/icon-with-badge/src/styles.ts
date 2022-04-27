@@ -7,6 +7,8 @@ export const Wrapper = styled("div", {
   verticalAlign: "middle",
   position: "relative",
 
+  paddingRight: 15,
+
   "& .badge": {
     position: "absolute",
     left: 15,

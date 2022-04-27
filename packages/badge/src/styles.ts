@@ -40,7 +40,7 @@ export const Wrapper = styled("div", {
         height: "22px",
         width: "22px",
         borderRadius: "11px",
-        fontSize: "$desktopXSmall",
+        fontSize: "$desktopXs",
       },
     },
   },

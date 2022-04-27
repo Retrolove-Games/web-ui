@@ -14,8 +14,8 @@ export const lineHeights = {
 }
 
 export const fontSizes = {
-  desktopXSmall: "0.87rem",
-  desktopSmall: "1.04rem",
+  desktopXs: "0.87rem",
+  desktopSm: "1.04rem",
   desktopDefault: "1.25rem",
 }
 

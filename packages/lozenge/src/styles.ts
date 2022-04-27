@@ -12,7 +12,7 @@ export const Wrapper = styled("span", {
   backgroundColor: "transparent",
 
   fontFamily: "$body",
-  fontSize: "$desktopSmall",
+  fontSize: "$desktopSm",
   color: "$neonBlueDefault",
   lineHeight: "$lh13",
   textTransform: "uppercase",

@@ -2,6 +2,7 @@ import { createStitches } from "@stitches/react";
 import { colors } from "./colors";
 import { utils } from "./utils";
 import { media } from "./media";
+import { space } from "./space";
 import { fonts, lineHeights, fontSizes, fontWeights } from "./typography";
 
 export const {
@@ -35,6 +36,9 @@ export const {
       neonBlueDefaultBorder: "rgba(127, 212, 202, .29)",
       redDefaultBorder: "rgba(233, 55, 80, .29)",
     },
+    space: {
+      ...space,
+    }
   },
   utils: {
     ...utils,

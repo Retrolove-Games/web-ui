@@ -7,7 +7,7 @@ export const Wrapper = styled("label", {
   color: "$redDefault",
   fontFamily: "$body",
   textTransform: "uppercase",
-  fontSize: "$desktopXSmall",
+  fontSize: "$desktopXs",
   lineHeight: "$lh13",
 
   [`.${darkTheme} &`]: {
