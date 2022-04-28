@@ -9,9 +9,13 @@ export const Wrapper = styled("button", {
   border: "none",
 
   "& .left": {
-    marginRight: 15
+    display: "flex",
+    paddingRight: "$sm",
   },
 
+  "& .right": {
+    display: "flex",
+  },
   // Polymorphic styles
   "button&": {
     cursor: "pointer"
