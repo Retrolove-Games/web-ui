@@ -22,7 +22,7 @@ export const Button = <T extends ElementType = "button">({
   return (
     <Wrapper as={component} type="button" color={color} size={size || {
       '@initial': 'small',
-      '@medium': 'medium',
+      '@md': 'medium',
     }} {...props}>
       <span>{children}</span>
     </Wrapper>
