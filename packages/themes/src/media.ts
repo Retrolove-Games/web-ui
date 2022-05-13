@@ -10,13 +10,13 @@ type MappedQueries = {
   [Property in AllQueries]: string;
 };
 const mediaHelper = (media: string | number) =>
-  `only screen and (min-width: ${media}px)`;
+  `(min-width: ${media}px)`;
 const portraitHelper = (media: string | number) =>
   `${media} and (orientation: portrait)`;
 const landscapeHelper = (media: string | number) =>
   `${media} and (orientation: landscape)`;
 
-const media = Object.keys(breakpoints).map((key) => ({
+const media = Object.assign({}, ...Object.keys(breakpoints).map((key) => ({
   [`${key}`]: mediaHelper(breakpoints[key as DefaultQueries]),
   [`${key}Portrait`]: portraitHelper(
     mediaHelper(breakpoints[key as DefaultQueries])
@@ -24,7 +24,7 @@ const media = Object.keys(breakpoints).map((key) => ({
   [`${key}Landscape`]: landscapeHelper(
     mediaHelper(breakpoints[key as DefaultQueries])
   ),
-})) as unknown as MappedQueries;
+}))) as unknown as MappedQueries;
 
 
 export { media };
