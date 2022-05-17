@@ -10,14 +10,30 @@ export const Wrapper = styled("button", {
 
   "& .left": {
     display: "flex",
-    paddingRight: "$sm",
   },
 
   "& .right": {
     display: "flex",
   },
+
   // Polymorphic styles
   "button&": {
     cursor: "pointer"
+  },
+
+  // Variants
+  variants: {
+    layout: {
+      mobile: {
+        "& .left": {
+          paddingRight: "$xs",
+        },
+      },
+      desktop: {
+        "& .left": {
+          paddingRight: "$sm",
+        },
+      },
+    }
   }
 });
