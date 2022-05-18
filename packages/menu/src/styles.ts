@@ -63,10 +63,12 @@ export const MenuItem = styled("li", {
 });
 
 export const SubMenuWrapper = styled("ul", {
-  transition: "height .25s",
+  transition: "height 0.25s linear",
+  overflow: "hidden",
+  height: `var(--original-height, "auto")`,
 
   // Modifiers
-  '&[aria-expanded="false"]': {
+  '&[aria-expanded="false"][data-ready="true"]': {
     height: 0
   },
 

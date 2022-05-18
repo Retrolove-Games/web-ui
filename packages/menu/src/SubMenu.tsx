@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
 import { VariantProps } from "@stitches/react";
 import { SubMenuWrapper } from "./styles";
 
@@ -12,8 +12,24 @@ export const SubMenu: ComponentType = ({
   children,
   isExpanded = true,
   ...props
-}) => (
-  <SubMenuWrapper aria-expanded={isExpanded} {...props}>
-    {children}
-  </SubMenuWrapper>
-);
+}) => {
+  const subMenuEl = useRef<HTMLUListElement>(null);
+  const [isReady, setIsReady] = useState(false);
+
+  useLayoutEffect(() => {
+    const height = subMenuEl.current?.offsetHeight;
+    subMenuEl.current?.style.setProperty("--original-height", `${height}px`);
+    setIsReady(true);
+  }, []);
+
+  return (
+    <SubMenuWrapper
+      ref={subMenuEl}
+      data-ready={isReady}
+      aria-expanded={isExpanded}
+      {...props}
+    >
+      {children}
+    </SubMenuWrapper>
+  );
+};
