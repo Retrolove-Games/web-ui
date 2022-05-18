@@ -7,8 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "lerna run build --stream",
-    "publish": "npm run build && lerna publish",
+    "build": "lerna run build --stream  --concurrency 2",
+    "publish": "npm run build && lerna publish --concurrency 2",
     "bootstrap": "lerna bootstrap",
     "lint": "eslint packages/**/src/**/*",
     "lint:fix": "eslint packages/**/src/**/* --fix",
