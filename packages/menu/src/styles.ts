@@ -61,16 +61,17 @@ export const MenuItemWrapper = styled("li", {
 export const SubMenuItemWrapper = styled("li", {
   "& a, & button": {
     color: "$redDefault",
+    borderBottomColor: "transparent",
   },
 
   // Themes
   [`.${darkTheme} &`]: {
     "& a, & button": {
       color: "$whiteDefault",
-      borderBottom: "none",
+      borderBottomColor: "transparent",
 
       "&:hover, &:focus": {
-        color: "$dark900",
+        color: "$dark800",
       },
     },
   },
@@ -85,9 +86,13 @@ export const SubMenuItemWrapper = styled("li", {
       smallDesktop: {
         textAlign: "left",
         fontSize: "$desktopSm",
+
+        "& a, & button": {
+          // padding: "0",
+        }
       },
       desktop: {
-        fontSize: "$desktopDefault",
+        // fontSize: "$desktopDefault",
       },
     },
   },
@@ -115,7 +120,7 @@ export const SubMenuWrapper = styled("ul", {
         },
       },
       smallDesktop: {
-        paddingLeft: "$md",
+        paddingLeft: "$lg",
       },
     },
   },
