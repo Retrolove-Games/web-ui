@@ -1,12 +1,12 @@
 import React from "react";
 import { VariantProps } from "@stitches/react";
-import { MenuItemWrapper} from "./styles";
+import { SubMenuItemWrapper } from "./styles";
 
-type ComponentVariants = VariantProps<typeof MenuItemWrapper>;
+type ComponentVariants = VariantProps<typeof SubMenuItemWrapper>;
 type ComponentType = React.FC<ComponentVariants>;
 
-export const MenuItem: ComponentType = ({ children, ...props }) => (
-  <MenuItemWrapper
+export const SubMenuItem: ComponentType = ({ children, ...props }) => (
+  <SubMenuItemWrapper
     layout={{
       "@initial": "mobile",
       "@xl": "smallDesktop",
@@ -15,5 +15,5 @@ export const MenuItem: ComponentType = ({ children, ...props }) => (
     {...props}
   >
     {children}
-  </MenuItemWrapper>
+  </SubMenuItemWrapper>
 );

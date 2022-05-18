@@ -1,7 +1,6 @@
 import { styled, darkTheme } from "@retrolove-games/ui-themes";
 
-export const MenuItem = styled("li", {
-
+export const MenuItemWrapper = styled("li", {
   display: "block",
   marginBottom: "$md",
 
@@ -26,21 +25,18 @@ export const MenuItem = styled("li", {
 
     "&:hover, &:focus": {
       color: "$red400",
-    }
+    },
   },
-
 
   // Themes
   [`.${darkTheme} &`]: {
-
-
     "& a, & button": {
       color: "$neonBlueDefault",
       borderBottom: "solid 1px $neonBlueDefault",
 
       "&:hover, &:focus": {
         color: "$neonBlue300",
-      }
+      },
     },
   },
 
@@ -58,7 +54,42 @@ export const MenuItem = styled("li", {
       desktop: {
         fontSize: "$desktopDefault",
       },
-    }
+    },
+  },
+});
+
+export const SubMenuItemWrapper = styled("li", {
+  "& a, & button": {
+    color: "$redDefault",
+  },
+
+  // Themes
+  [`.${darkTheme} &`]: {
+    "& a, & button": {
+      color: "$whiteDefault",
+      borderBottom: "none",
+
+      "&:hover, &:focus": {
+        color: "$dark900",
+      },
+    },
+  },
+
+  // Variants
+  variants: {
+    layout: {
+      mobile: {
+        textAlign: "center",
+        fontSize: "$mobileP",
+      },
+      smallDesktop: {
+        textAlign: "left",
+        fontSize: "$desktopSm",
+      },
+      desktop: {
+        fontSize: "$desktopDefault",
+      },
+    },
   },
 });
 
@@ -66,20 +97,27 @@ export const SubMenuWrapper = styled("ul", {
   transition: "height 0.25s linear",
   overflow: "hidden",
   height: `var(--original-height, "auto")`,
+  listStyle: "none",
 
   // Modifiers
   '&[aria-expanded="false"][data-ready="true"]': {
-    height: 0
-  },
-
-  // Themes
-  [`.${darkTheme} &`]: {
-
+    height: 0,
   },
 
   // Variants
   variants: {
-
+    layout: {
+      mobile: {
+        marginTop: "$md",
+        padding: "0",
+        [`& ${SubMenuItemWrapper} ~ ${SubMenuItemWrapper}`]: {
+          marginTop: "$sm",
+        },
+      },
+      smallDesktop: {
+        paddingLeft: "$md",
+      },
+    },
   },
 });
 
@@ -89,12 +127,8 @@ export const Wrapper = styled("ul", {
   padding: "0",
 
   // Themes
-  [`.${darkTheme} &`]: {
-
-  },
+  [`.${darkTheme} &`]: {},
 
   // Variants
-  variants: {
-
-  },
+  variants: {},
 });
