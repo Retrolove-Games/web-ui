@@ -3,7 +3,6 @@ import { RED_VARIANT, NEON_BLUE_VARIANT, PURPUREUS_VARIANT } from "./config";
 
 
 export const Wrapper = styled("button", {
-  display: "inline-flex",
   justifyContent: "center",
   alignItems: "center",
   verticalAlign: "middle",
@@ -61,6 +60,15 @@ export const Wrapper = styled("button", {
       medium: {
         height: "40px",
       },
+    },
+
+    width: {
+      normal: {
+        display: "inline-flex",
+      },
+      full: {
+        display: "flex",
+      }
     },
   },
 });

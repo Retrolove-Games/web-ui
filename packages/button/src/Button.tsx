@@ -8,6 +8,7 @@ export type ComponentVariants = VariantProps<typeof Wrapper>;
 type ButtonProps<T extends ElementType> = {
   as?: T;
   children: ReactNode;
+  shouldFitContainer?: boolean;
 };
 
 export const Button = <T extends ElementType = "button">({
@@ -15,15 +16,25 @@ export const Button = <T extends ElementType = "button">({
   children,
   color,
   size,
+  shouldFitContainer = false,
   ...props
 }: ButtonProps<T> & ComponentPropsWithoutRef<T> & ComponentVariants) => {
   const component = as || "button";
 
   return (
-    <Wrapper as={component} type="button" color={color} size={size || {
-      '@initial': 'small',
-      '@md': 'medium',
-    }} {...props}>
+    <Wrapper
+      as={component}
+      type="button"
+      color={color}
+      size={
+        size || {
+          "@initial": "small",
+          "@md": "medium",
+        }
+      }
+      width={shouldFitContainer ? "full" : "normal"}
+      {...props}
+    >
       <span>{children}</span>
     </Wrapper>
   );
