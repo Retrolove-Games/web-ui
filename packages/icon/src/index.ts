@@ -8,4 +8,5 @@ export * from "./IconSun";
 export * from "./IconTwitter";
 export * from "./IconBurger";
 export * from "./IconSearch";
+export * from "./IconReturn";
 export * from  "./config";
