@@ -4,6 +4,61 @@ export const RootElement = styled("button", {});
 
 export const SubElement = styled("button", {});
 
+export const SubMenuFooterWrapper = styled("li", {
+  // Variants
+  variants: {
+    layout: {
+      mobile: {
+        marginTop: "$lg",
+      },
+      desktop: {
+        marginTop: "$xl",
+      },
+    },
+  },
+});
+
+export const SubMenuLabelWrapper = styled("li", {
+  display: "block",
+  marginBottom: "$md",
+
+  color: "$redDefault",
+  border: "none",
+  borderBottom: "solid 1px $redDefault",
+
+  background: "transparent",
+  textAlign: "inherit",
+
+  fontFamily: "$body",
+  textTransform: "uppercase",
+  textDecoration: "none",
+  lineHeight: "$lh1618",
+  padding: "$sm 0",
+
+  // Themes
+  [`.${darkTheme} &`]: {
+    color: "$neonBlueDefault",
+    borderBottom: "solid 1px $neonBlueDefault",
+  },
+
+  // Variants
+  variants: {
+    layout: {
+      mobile: {
+        textAlign: "center",
+        fontSize: "$mobileH6",
+      },
+      smallDesktop: {
+        textAlign: "left",
+        fontSize: "$desktopSm",
+      },
+      desktop: {
+        fontSize: "$desktopDefault",
+      },
+    },
+  },
+});
+
 export const MenuItemWrapper = styled("li", {
   display: "block",
   marginBottom: "$md",
@@ -107,6 +162,7 @@ export const SubMenuWrapper = styled("ul", {
   overflow: "hidden",
   height: `var(--original-height, "auto")`,
   listStyle: "none",
+  paddingLeft: "$sm",
 
   // Modifiers & states
   '&[aria-expanded="false"][data-ready="true"]': {
@@ -124,7 +180,7 @@ export const SubMenuWrapper = styled("ul", {
         },
       },
       smallDesktop: {
-        paddingLeft: "$lg",
+        // paddingLeft: "$sm",
       },
     },
   },
@@ -135,6 +191,8 @@ export const SlidingSubMenuWrapper = styled("ul", {
   width: "100%",
   top: "0%",
   listStyle: "none",
+  padding: "0",
+  paddingLeft: "$sm",
 
   [`&[data-level="1"]`]: {
     left: "100%",
