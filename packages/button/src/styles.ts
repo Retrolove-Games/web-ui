@@ -7,7 +7,7 @@ export const Wrapper = styled("button", {
   alignItems: "center",
   verticalAlign: "middle",
 
-  border: "solid 2px",
+  border: "solid 1px",
   borderRadius: "8px",
   padding: "0 10px",
   boxShadow: "none",
