@@ -1,10 +1,14 @@
 import { styled, darkTheme } from "@retrolove-games/ui-themes";
 
+export const RootElement = styled("button", {});
+
+export const SubElement = styled("button", {});
+
 export const MenuItemWrapper = styled("li", {
   display: "block",
   marginBottom: "$md",
 
-  "& a, & button": {
+  [`& a, & ${RootElement}`]: {
     color: "$redDefault",
     border: "none",
     borderBottom: "solid 1px $redDefault",
@@ -23,18 +27,18 @@ export const MenuItemWrapper = styled("li", {
     padding: "$sm 0",
     cursor: "pointer",
 
-    "&:hover, &:focus": {
+    "&:hover": {
       color: "$red400",
     },
   },
 
   // Themes
   [`.${darkTheme} &`]: {
-    "& a, & button": {
+    [`& a, & ${RootElement}`]: {
       color: "$neonBlueDefault",
       borderBottom: "solid 1px $neonBlueDefault",
 
-      "&:hover, &:focus": {
+      "&:hover": {
         color: "$neonBlue300",
       },
     },
@@ -59,14 +63,14 @@ export const MenuItemWrapper = styled("li", {
 });
 
 export const SubMenuItemWrapper = styled("li", {
-  "& a, & button": {
+  [`& a, & ${SubElement}`]: {
     color: "$redDefault",
     borderBottomColor: "transparent",
   },
 
   // Themes
   [`.${darkTheme} &`]: {
-    "& a, & button": {
+    [`& a, & ${SubElement}`]: {
       color: "$whiteDefault",
       borderBottomColor: "transparent",
 
@@ -87,9 +91,9 @@ export const SubMenuItemWrapper = styled("li", {
         textAlign: "left",
         fontSize: "$desktopSm",
 
-        "& a, & button": {
+        [`& a, & ${SubElement}`]: {
           // padding: "0",
-        }
+        },
       },
       desktop: {
         // fontSize: "$desktopDefault",
@@ -104,7 +108,7 @@ export const SubMenuWrapper = styled("ul", {
   height: `var(--original-height, "auto")`,
   listStyle: "none",
 
-  // Modifiers
+  // Modifiers & states
   '&[aria-expanded="false"][data-ready="true"]': {
     height: 0,
   },
@@ -126,10 +130,40 @@ export const SubMenuWrapper = styled("ul", {
   },
 });
 
+export const SlidingSubMenuWrapper = styled("ul", {
+  position: "absolute",
+  width: "100%",
+  top: "0%",
+  listStyle: "none",
+
+  [`&[data-level="1"]`]: {
+    left: "100%",
+  },
+
+  [`&[data-level="2"]`]: {
+    left: "200%",
+  },
+
+  [`&[data-level="3"]`]: {
+    left: "300%",
+  },
+
+  [`&[aria-hidden="true"]`]: {
+    display: "none",
+  },
+});
+
 export const Wrapper = styled("ul", {
   width: "100%",
   listStyle: "none",
   padding: "0",
+  position: "relative",
+  transition: "all .5s",
+
+  // Mods
+  '&[data-level="1"]': { transform: "translate3d(-100%, 0, 0)" },
+  '&[data-level="2"]': { transform: "translate3d(-200%, 0, 0)" },
+  '&[data-level="3"]': { transform: "translate3d(-300%, 0, 0)" },
 
   // Themes
   [`.${darkTheme} &`]: {},

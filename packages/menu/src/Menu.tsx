@@ -3,10 +3,13 @@ import { VariantProps } from "@stitches/react";
 import { Wrapper } from "./styles";
 
 type ComponentVariants = VariantProps<typeof Wrapper>;
-type ComponentType = React.FC<ComponentVariants>;
+type ComponentProps = {
+  level?: number;
+};
+type ComponentType = React.FC<ComponentVariants & ComponentProps>;
 
-export const Menu: ComponentType = ({ children, ...props }) => (
-  <Wrapper {...props}>
+export const Menu: ComponentType = ({ children, level = 0, ...props }) => (
+  <Wrapper data-level={level} {...props}>
     {children}
   </Wrapper>
 );
