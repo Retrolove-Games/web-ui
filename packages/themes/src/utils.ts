@@ -1,6 +1,6 @@
 const niceBorder = (color: string, width = 1) => ({
-  outline: `solid ${width}px ${color}`,
-  boxShadow: `0 0 ${width + 1}px 0 ${color} inset`,
+  // border: `solid ${width}px ${color}`,
+  boxShadow: `0 0 ${width}px ${width}px ${color} inset`,
 });
 
 export const utils = {
