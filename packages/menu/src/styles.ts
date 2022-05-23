@@ -5,14 +5,32 @@ export const RootElement = styled("button", {});
 export const SubElement = styled("button", {});
 
 export const SubMenuFooterWrapper = styled("li", {
+  textAlign: "inherit",
+
   // Variants
   variants: {
     layout: {
       mobile: {
-        marginTop: "$lg",
+        paddingTop: "$xl",
       },
       desktop: {
-        marginTop: "$xl",
+        paddingTop: "$xxl",
+      },
+    },
+  },
+});
+
+export const MenuFooterWrapper = styled("li", {
+  textAlign: "inherit",
+
+  // Variants
+  variants: {
+    layout: {
+      mobile: {
+        paddingTop: "$xl",
+      },
+      desktop: {
+        paddingTop: "$xxl",
       },
     },
   },
