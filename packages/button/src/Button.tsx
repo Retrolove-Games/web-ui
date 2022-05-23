@@ -2,13 +2,15 @@
 /* eslint-disable arrow-body-style */
 import React, { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 import type { VariantProps } from "@stitches/react";
-import { Wrapper } from "./styles";
+import { Wrapper, LeftElementWrapper, RightElementWrapper } from "./styles";
 
 export type ComponentVariants = VariantProps<typeof Wrapper>;
 type ButtonProps<T extends ElementType> = {
   as?: T;
   children: ReactNode;
   shouldFitContainer?: boolean;
+  leftElement?: ReactNode;
+  rightElement?: ReactNode;
 };
 
 export const Button = <T extends ElementType = "button">({
@@ -17,6 +19,8 @@ export const Button = <T extends ElementType = "button">({
   color,
   size,
   shouldFitContainer = false,
+  leftElement,
+  rightElement,
   ...props
 }: ButtonProps<T> & ComponentPropsWithoutRef<T> & ComponentVariants) => {
   const component = as || "button";
@@ -35,7 +39,9 @@ export const Button = <T extends ElementType = "button">({
       width={shouldFitContainer ? "full" : "normal"}
       {...props}
     >
+      {leftElement && <LeftElementWrapper>{leftElement}</LeftElementWrapper>}
       <span>{children}</span>
+      {rightElement && <RightElementWrapper>{leftElement}</RightElementWrapper>}
     </Wrapper>
   );
 };

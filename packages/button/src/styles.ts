@@ -1,6 +1,13 @@
 import { styled, darkTheme } from "@retrolove-games/ui-themes";
 import { RED_VARIANT, NEON_BLUE_VARIANT, PURPUREUS_VARIANT } from "./config";
 
+export const LeftElementWrapper = styled("div", {
+  paddingRight: "$sm",
+});
+
+export const RightElementWrapper = styled("div", {
+  paddingLeft: "$sm",
+});
 
 export const Wrapper = styled("button", {
   justifyContent: "center",
