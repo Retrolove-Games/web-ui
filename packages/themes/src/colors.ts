@@ -50,7 +50,6 @@ export const colors = {
   purpureus800: "#d3bbda",
   purpureus900: "#e9ddec",
   purpureus1000: "#f4eef6",
-
   purpureusDefault: "$purpureus500",
 
   btnHoverText: "$whiteDefault",
