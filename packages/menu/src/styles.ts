@@ -121,6 +121,11 @@ export const SubMenuItemWrapper = styled("li", {
   [`& a, & ${SubElement}`]: {
     color: "$redDefault",
     borderBottomColor: "transparent",
+
+    // Active element
+    '&[aria-current="page"], &[aria-current="page"]:hover': {
+      color: "$purpureusDefault",
+    },
   },
 
   // Themes
@@ -131,6 +136,11 @@ export const SubMenuItemWrapper = styled("li", {
 
       "&:hover, &:focus": {
         color: "$dark800",
+      },
+
+      // Active element
+      '&[aria-current="page"], &[aria-current="page"]:hover': {
+        color: "$redDefault",
       },
     },
   },
