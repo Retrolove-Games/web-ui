@@ -4,4 +4,6 @@ export const space = {
   "md": "16px",
   "lg": "24px",
   "xl": "32px",
+  "xxl": "48px",
+  "xxxl": "64px",
 };
