@@ -29,6 +29,9 @@ export const MenuFooterWrapper = styled("li", {
       mobile: {
         paddingTop: "$xl",
       },
+      smallDesktop: {
+        paddingTop: "$xl",
+      },
       desktop: {
         paddingTop: "$xxl",
       },
@@ -79,12 +82,12 @@ export const SubMenuLabelWrapper = styled("li", {
 
 export const MenuItemWrapper = styled("li", {
   display: "block",
-  marginBottom: "$md",
 
   [`& a, & ${RootElement}`]: {
     color: "$redDefault",
     border: "none",
     borderBottom: "solid 1px $redDefault",
+    padding: "0 0",
 
     background: "transparent",
     textAlign: "inherit",
@@ -97,7 +100,6 @@ export const MenuItemWrapper = styled("li", {
     textTransform: "uppercase",
     textDecoration: "none",
     lineHeight: "$lh1618",
-    padding: "$sm 0",
     cursor: "pointer",
 
     "&:hover": {
@@ -123,13 +125,20 @@ export const MenuItemWrapper = styled("li", {
       mobile: {
         textAlign: "center",
         fontSize: "$mobileH6",
+        marginBottom: "$md",
       },
       smallDesktop: {
         textAlign: "left",
         fontSize: "$desktopSm",
+        marginBottom: "$md",
       },
       desktop: {
         fontSize: "$desktopDefault",
+        marginBottom: "$md",
+
+        [`& a, & ${RootElement}`]: {
+          padding: "$xs 0",
+        }
       },
     },
   },
@@ -169,17 +178,15 @@ export const SubMenuItemWrapper = styled("li", {
       mobile: {
         textAlign: "center",
         fontSize: "$mobileP",
+        marginBottom: "$sm",
       },
       smallDesktop: {
         textAlign: "left",
-        fontSize: "$desktopSm",
-
-        [`& a, & ${SubElement}`]: {
-          // padding: "0",
-        },
+        fontSize: "$desktopXs",
+        marginBottom: "0",
       },
       desktop: {
-        // fontSize: "$desktopDefault",
+        fontSize: "$desktopSm",
       },
     },
   },
@@ -203,12 +210,10 @@ export const SubMenuWrapper = styled("ul", {
       mobile: {
         marginTop: "$md",
         padding: "0",
+
         [`& ${SubMenuItemWrapper} ~ ${SubMenuItemWrapper}`]: {
           marginTop: "$sm",
         },
-      },
-      smallDesktop: {
-        // paddingLeft: "$sm",
       },
     },
   },

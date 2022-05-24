@@ -29,7 +29,6 @@ export const SubMenu: ComponentType = ({
       aria-expanded={isExpanded}
       layout={{
         "@initial": "mobile",
-        "@xl": "smallDesktop",
       }}
       {...props}
     >

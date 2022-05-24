@@ -9,7 +9,8 @@ export const MenuFooter: ComponentType = ({ children, ...props }) => (
   <MenuFooterWrapper
     layout={{
       "@initial": "mobile",
-      "@xl": "desktop",
+      "@xl": "smallDesktop",
+      "@xxl": "desktop",
     }}
     {...props}
   >
